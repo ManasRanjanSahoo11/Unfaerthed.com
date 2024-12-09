@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.slide-img{
+    width: 100vw;
+    height:85vh ;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.inside-img{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.hero__bg{
+    background-image: url('../public/Imgs-Videos/06.jpg');
+}
+
+
+.mySwiper {
+    width: 100%; 
+    height: 81vh; 
+    position: relative;
+  }
+  
+  .mySwiper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+  }
+  
+  .centered-text {
+    position: absolute;
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 5rem;
+    font-weight: bold;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+    z-index: 10;
+  }
