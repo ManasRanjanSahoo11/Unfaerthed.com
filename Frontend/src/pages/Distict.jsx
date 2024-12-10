@@ -27,6 +27,8 @@ function Distict() {
             try {
                 const res = await axios.get(`http://localhost:5000/districts/${districtName}`);
                 setDistrictData(res.data);
+                console.log(districtData);
+                
             } catch (err) {
                 console.log('An error occurred');
             }

@@ -1,42 +1,34 @@
 import React from 'react'
-import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
 import TestimonialSection from '../components/TestimonialCard';
 import VacationCard from '../components/VacationCard';
 import GoogleMap from '../components/GoogleMap';
 import Review from '../components/Review';
 import Guider from '../components/Guider';
+import Navbar2 from '../components/Navbar2';
 
 function HiddenPlace() {
 
     const testimonials = [
         {
-            title: "Very easy this was to integrate",
-            quote: "If you care for your time, I hands down would go with this.",
-            name: "Bonnie Green",
-            role: "Developer at Open AI",
-            imageSrc: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png",
+            title: "Where to Eat",
+            quote: "One is spoilt for choices in Bhubaneswar as far as food goes, from street food to star dining experience, the city caters to a diverse palate and wallet. The food vans, roadside eateries and restaurants are quite popular in the city.",
+            imageSrc: "https://w7.pngwing.com/pngs/896/533/png-transparent-eating-cutlery-restaurant-food-kitchen-utensil-eating-miscellaneous-kitchen-plate-thumbnail.png",
         },
         {
-            title: "Solid foundation for any project",
-            quote: "Designing with Figma components that can be easily translated to the utility classes of Tailwind CSS is a huge timesaver!",
-            name: "Roberta Casas",
-            role: "Lead designer at Dropbox",
-            imageSrc: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png",
+            title: "Best Time to Visit",
+            quote: "Throughout the year",
+            imageSrc: "https://w7.pngwing.com/pngs/948/743/png-transparent-time-management-time-attendance-clocks-organization-time-thumbnail.png",
         },
         {
-            title: "Mindblowing workflow",
-            quote: "Aesthetically, the well designed components are beautiful and will undoubtedly level up your next application.",
-            name: "Jese Leos",
-            role: "Software Engineer at Facebook",
-            imageSrc: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png",
+            title: "Travelling Essentials",
+            quote: "During winters – Jacket & Woolens are a must. Summers – are hot and can be humid. You are advised to carry Cap/Hat & sunscreen lotions.",
+            imageSrc: "https://w7.pngwing.com/pngs/68/466/png-transparent-illustration-of-character-traveling-travel-tourism-euclidean-global-travel-backpack-computer-wallpaper-happy-birthday-vector-images-thumbnail.png",
         },
         {
-            title: "Efficient Collaborating",
-            quote: "You have many examples that can be used to create a fast prototype for your team.",
-            name: "Joseph McFall",
-            role: "CTO at Google",
-            imageSrc: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png",
+            title: "Climate",
+            quote: "Its tropical climate, with hot & humid summers & pleasant winters.",
+            imageSrc: "https://w7.pngwing.com/pngs/760/237/png-transparent-weather-and-climate-weather-and-climate-weather-radar-weather-station-weather-leaf-logo-weather-forecasting-thumbnail.png",
         },
     ];
 
@@ -50,7 +42,7 @@ function HiddenPlace() {
 
             <Guider/>
 
-            <NavBar />
+            <Navbar2 />
             <main className='px-24'>
                 <h1 className='text-4xl text-center font-semibold py-10 text-white'>Shree Jagannath Temple, Shreekhetra, Puri</h1>
 
@@ -111,30 +103,28 @@ function HiddenPlace() {
                     />
                 </div>
 
-
-
                 <div>
                     <h1 className='text-4xl text-center font-semibold py-10 text-white'>Popular Tourist Attractions Near Puri Jagannath Temple</h1>
 
                     <div className='grid grid-cols-2 gap-5'>
                         <VacationCard
-                            imageSrc="https://images.pexels.com/photos/4381392/pexels-photo-4381392.jpeg?full=compress&cs=tinysrgb&dpr=1&w=500"
+                            imageSrc="https://www.india.com/wp-content/uploads/2024/04/Tranquil-Beaches.jpg"
                             category="Vacations"
-                            rating={4.96}
-                            reviews={76}
+                            rating={4.5}
+                            reviews={50}
                             isSuperhost={true}
-                            title="The Majestic and Wonderful Bahamas"
-                            description="The best kept secret of The Bahamas is the country’s sheer size and diversity. With 16 major islands, The Bahamas is an unmatched destination."
+                            title="Balighai's tranquil beaches"
+                            description="Ditch the madding crowds on Puri's main sands, where hawkers shout and lines of multicoloured umbrellas obscure your view."
                             price={110}
                         />
                         <VacationCard
-                            imageSrc="https://images.pexels.com/photos/4381392/pexels-photo-4381392.jpeg?full=compress&cs=tinysrgb&dpr=1&w=500"
+                            imageSrc="https://s3.india.com/wp-content/uploads/2024/04/Feature-Image_-Puri.jpg?impolicy=Medium_Widthonly&w=500&h=375"
                             category="Vacations"
-                            rating={4.96}
-                            reviews={76}
+                            rating={4.0}
+                            reviews={176}
                             isSuperhost={true}
-                            title="The Majestic and Wonderful Bahamas"
-                            description="The best kept secret of The Bahamas is the country’s sheer size and diversity. With 16 major islands, The Bahamas is an unmatched destination."
+                            title="Beaten-Path Delights"
+                            description="With its grand Jagannath Temple, ancient bathing ghats and striking Sun Temple looking out across the choppy Bay of Bengal, Puri is a beguiling place."
                             price={110}
                         />
                     </div>

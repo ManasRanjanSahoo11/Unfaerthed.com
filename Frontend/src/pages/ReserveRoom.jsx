@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom'; // Import useLocation
 import Navbar2 from '../components/Navbar2';
 
 const ReserveRoom = () => {
+    const location = useLocation(); // Access location state
+    const passedPrice = location.state?.price || ''; // Retrieve passed price or set to empty string
+
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [paymentMethod, setPaymentMethod] = useState('');
+    const [price, setPrice] = useState(passedPrice); // Initialize with passed price
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
@@ -31,7 +36,6 @@ const ReserveRoom = () => {
         },
     ];
 
-    // Determine the button text based on the payment method
     const getButtonText = () => {
         if (paymentMethod) {
             return `Reserve with ${paymentMethod}`;
@@ -93,9 +97,12 @@ const ReserveRoom = () => {
                                 <input
                                     type="text"
                                     id="price"
-                                    className="px-2 py-2 bg-gray-800 border w-full outline-none rounded-md"
+                                    value={`₹ ${price}`} 
+                                    onChange={(e) => setPrice(e.target.value)} 
+                                    className="px-2 py-2 bg-gray-800 border w-full outline-none rounded-md disabled"
                                     placeholder="Enter price"
                                     required
+                                    disabled
                                 />
                             </div>
 
@@ -151,7 +158,7 @@ const ReserveRoom = () => {
                                 type="submit"
                                 className="w-full rounded bg-orange-400 px-6 py-2.5 font-medium uppercase leading-normal text-white hover:shadow-md hover:bg-orange-500"
                             >
-                                {getButtonText()} {/* Display dynamic button text */}
+                                {getButtonText()}
                             </button>
                         </form>
 

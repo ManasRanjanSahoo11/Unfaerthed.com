@@ -1,11 +1,14 @@
 import { useNavigate } from 'react-router-dom';
 
-export function HotelBooking__RoomCard({ image, title, description, rating }) {
-
+export function HotelBooking__RoomCard({ image, title, description, rating, price }) {
   const navigate = useNavigate();
 
-  function handleReserveClick(){
-    navigate('/hotelbooking/reserve-room')
+  function handleReserveClick() {
+    navigate('/hotelbooking/reserve-room', {
+        state: {
+          price
+        },
+      });
   }
 
   return (
@@ -49,36 +52,40 @@ export function HotelBooking__RoomCard({ image, title, description, rating }) {
             {rating}
           </div>
         </div>
-        <p className="text-gray-600 line-clamp-2">
+        <p className="text-gray-600 line-clamp-2 mb-2">
           {description}
         </p>
+        <p className="text-lg font-semibold text-gray-700 mb-4 bg-gray-300 w-fit px-3 py-1 rounded-md">
+         ₹{" "}{price} / Night
+        </p>
         <div className="mt-8">
-            <ul className="flex gap-5">
-                <li className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 hover:border-gray-900/10 hover:bg-gray-900/10 hover:opacity-80">
-                    <img src="../Imgs-Videos/h-96.png" alt="" />
-                </li>
-                <li className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 hover:border-gray-900/10 hover:bg-gray-900/10 hover:opacity-80">
-                    <img src="../Imgs-Videos/h-95.png" alt="" />
-                </li>
-                <li className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 hover:border-gray-900/10 hover:bg-gray-900/10 hover:opacity-80">
-                    <img src="../Imgs-Videos/h-94.png" alt="" />
-                </li>
-                <li className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 hover:border-gray-900/10 hover:bg-gray-900/10 hover:opacity-80">
-                    <img src="../Imgs-Videos/h-93.png" alt="" />
-                </li>
-                <li className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 hover:border-gray-900/10 hover:bg-gray-900/10 hover:opacity-80">
-                    <img src="../Imgs-Videos/h-92.png" alt="" />
-                </li>
-                <li className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 hover:border-gray-900/10 hover:bg-gray-900/10 hover:opacity-80">
-                    <img src="../Imgs-Videos/h-91.png" alt="" />
-                </li>
-            </ul>   
+          <ul className="flex gap-5">
+            <li className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 hover:border-gray-900/10 hover:bg-gray-900/10 hover:opacity-80">
+              <img src="../Imgs-Videos/h-96.png" alt="" />
+            </li>
+            <li className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 hover:border-gray-900/10 hover:bg-gray-900/10 hover:opacity-80">
+              <img src="../Imgs-Videos/h-95.png" alt="" />
+            </li>
+            <li className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 hover:border-gray-900/10 hover:bg-gray-900/10 hover:opacity-80">
+              <img src="../Imgs-Videos/h-94.png" alt="" />
+            </li>
+            <li className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 hover:border-gray-900/10 hover:bg-gray-900/10 hover:opacity-80">
+              <img src="../Imgs-Videos/h-93.png" alt="" />
+            </li>
+            <li className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 hover:border-gray-900/10 hover:bg-gray-900/10 hover:opacity-80">
+              <img src="../Imgs-Videos/h-92.png" alt="" />
+            </li>
+            <li className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 hover:border-gray-900/10 hover:bg-gray-900/10 hover:opacity-80">
+              <img src="../Imgs-Videos/h-91.png" alt="" />
+            </li>
+          </ul>
         </div>
 
-        <button 
-        onClick={handleReserveClick}
-        className="bg-orange-400 text-white shadow-sm w-full py-2 rounded-sm font-semibold text-md mt-5 ">
-            Reserve
+        <button
+          onClick={handleReserveClick}
+          className="bg-orange-400 text-white shadow-sm w-full py-2 rounded-sm font-semibold text-md mt-5"
+        >
+          Reserve
         </button>
       </div>
     </div>
