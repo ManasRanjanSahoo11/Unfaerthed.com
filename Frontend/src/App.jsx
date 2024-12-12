@@ -4,6 +4,7 @@ import Distict from "./pages/Distict";
 import HiddenPlace from "./pages/HiddenPlace";
 import HotelBooking from "./pages/HotelBooking";
 import Home from "./pages/Home";
+import Admin from "./pages/Admin";
 import Home2 from "./pages/Home2";
 
 import GoogleMapViewer from './components/GoogleMapViewer'
@@ -21,6 +22,8 @@ function App() {
         <Route path="/hiddenplace" element={<HiddenPlace />} />
         <Route path="/hotelbooking" element={<HotelBooking/>} />
         <Route path="/hotelbooking/reserve-room" element={<ReserveRoom/>} />
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/signin" element={<SignIn />} />
       </Routes>
     </Router>
   );

@@ -137,7 +137,28 @@ const Navbar2 = () => {
                     </div>
                 </div>
 
-                <div>
+                <div className="flex gap-5">
+                    <button
+                        type="button"
+                        className="flex items-center space-x-2 text-white bg-[#FF9119] hover:bg-transparent hover:border-2 hover:border-[#FF9119] border-2 border-[#FF9119] hover:bg-[#FF9119] hover:text-white focus:ring-2 focus:outline-none focus:ring-[#FF9119]/50 font-medium rounded-full text-sm px-6 py-3 transition duration-300 ease-in-out"
+                        onClick={()=>{navigate('/signin')}}
+                    >
+                        <span>Admin Login</span>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            strokeWidth="1.5"
+                            stroke="currentColor"
+                            className="w-5 h-5"
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                            />
+                        </svg>
+                    </button>
                     {!user && (
                         <button
                             type="button"

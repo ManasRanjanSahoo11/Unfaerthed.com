@@ -1,8 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { EyeSlashIcon, EyeIcon } from "@heroicons/react/24/solid";
 
 export default function SignIn() {
   const [passwordShown, setPasswordShown] = useState(false);
+
+  const navigate = useNavigate()
 
   return (
     <>
@@ -62,17 +65,18 @@ export default function SignIn() {
             <button
               type="submit"
               className="w-full text-black font-medium py-2.5 rounded-lg focus:ring-blue-200 transition duration-300 ease-in-out bg-[#FF9119] hover:bg-transparent hover:border-2 hover:border-[#FF9119] border-2 border-[#FF9119] hover:bg-[#FF9119] hover:text-white focus:ring-2 focus:outline-none focus:ring-[#FF9119]/50"
+              onSubmit={()=>{navigate('/admin')}}
             >
               Sign In
             </button>
 
-            <div className="flex items-center my-6">
+            {/* <div className="flex items-center my-6">
               <hr className="flex-grow border-gray-300" />
               <span className="px-3 text-gray-500 text-sm">OR</span>
               <hr className="flex-grow border-gray-300" />
-            </div>
+            </div> */}
 
-            <button
+            {/* <button
               type="button"
               className="flex w-full items-center justify-center gap-2 border-2 border-gray-300 py-2.5 rounded-lg text-md text-white focus:ring-gray-200 hover:bg-[#FF9119] hover:text-black focus:ring-2 focus:outline-none focus:ring-[#FF9119]/50 font-medium px-6 transition duration-300 ease-in-out"
             >
@@ -82,7 +86,7 @@ export default function SignIn() {
                 className="h-5 w-5"
               />
               Sign in with Google
-            </button>
+            </button> */}
           </form>
         </div>
       </section>
